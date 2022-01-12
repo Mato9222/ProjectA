@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
 
-client = MongoClient('localhost', "host_num") #"host_num"을 지우고 해당 호스트 넘버로 변경
+client = MongoClient('localhost', 27017 ) #"host_num"을 지우고 해당 호스트 넘버로 변경
 
 db = client.dbsparta
 
