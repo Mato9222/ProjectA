@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>마이 페이보릿 무비스타 | 프론트-백엔드 연결 마지막 예제!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <title>회원가입</title>
+
+    <script type="text/JavaScript">
+
+        function hey() {
+            alert('가입이 취소되었습니다.');
+        }
+        function check() {
+            var name = document.getElementById("name");
+            var id = document.getElementById("id");
+            var pass = document.getElementById("pass");
+            var pass_1 = document.getElementById("pass_1");
+
+            if (name.value == "") {
+                alert("닉네임를 입력하세요.");
+                name.focus();
+                return false;
+            }
+            if (id.value == "") {
+                alert("ID를 입력하세요.");
+                id.focus();
+                return false;
+            }
+            if (pass.value == "") {
+                alert("비밀번호를 입력하세요.");
+                pass.focus();
+                return false;
+            }
+            var reg = /^[0-9]+/g;
+
+            if (!reg.test(pass.value)) {
+                alert("비밀번호는 숫자만 입력할 수 있습니다.");
+                pass.focus();
+                return false;
+            }
+            if (pass_1.value == "") {
+                alert("비밀번호 확인을 입력하세요.");
+                pass_1.focus();
+                return false;
+            }
+            if (pass_1.value !== pass.value) {
+                alert("비밀번호가 일치하지 않습니다.");
+                pass_1.focus();
+                return false;
+            }
+            alert('가입이 완료되었습니다.')
+            location.href= "http://www.naver.com"
+        }
+    </script>
+</head>
+
+<body>
+
+<center>
+    <div id="join">
+        <h3>회원가입</h3>
+
+        <table cellpadding="5" cellspacing="0" from name="fm">
+            <tr>
+                <td>닉네임:</td>
+                <td><input id="name" type="text" placeholder="닉네임을 적어주세요.">
+                </td>
+            </tr>
+            <tr>
+                <td>ID:</td>
+                <td><input id="id" type="text" placeholder="아이디">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호:</td>
+                <td><input id="pass" type="password" placeholder="비밀번호"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인:</td>
+                <td><input id="pass_1" type="password" placeholder="비밀번호 확인"></td>
+
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <a onclick="check()">
+                        <button>가입하기</button>
+                    </a>
+                    <a onclick="hey()" href="http://www.naver.com">
+                        <button>가입취소</button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</center>
+
+</body>
+
+</html>
