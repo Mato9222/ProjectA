@@ -1,17 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ë§ˆì´ í˜ì´ë³´ë¦¿ ë¬´ë¹„ìŠ¤íƒ€ | í”„ë¡ íŠ¸-ë°±ì—”ë“œ ì—°ê²° ë§ˆì§€ë§‰ ì˜ˆì œ!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-
-    <title>È¸¿ø°¡ÀÔ</title>
+    <title>íšŒì›ê°€ì…</title>
 
     <script type="text/JavaScript">
 
         function hey() {
-            alert('°¡ÀÔÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.');
+            alert('ê°€ì…ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤.');
         }
         function check() {
             var name = document.getElementById("name");
@@ -20,38 +22,38 @@
             var pass_1 = document.getElementById("pass_1");
 
             if (name.value == "") {
-                alert("´Ğ³×ÀÓ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+                alert("ë‹‰ë„¤ì„ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
                 name.focus();
                 return false;
             }
             if (id.value == "") {
-                alert("ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+                alert("IDë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
                 id.focus();
                 return false;
             }
             if (pass.value == "") {
-                alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+                alert("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
                 pass.focus();
                 return false;
             }
             var reg = /^[0-9]+/g;
 
             if (!reg.test(pass.value)) {
-                alert("ºñ¹Ğ¹øÈ£´Â ¼ıÀÚ¸¸ ÀÔ·ÂÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                alert("ë¹„ë°€ë²ˆí˜¸ëŠ” ìˆ«ìë§Œ ì…ë ¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 pass.focus();
                 return false;
             }
             if (pass_1.value == "") {
-                alert("ºñ¹Ğ¹øÈ£ È®ÀÎÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+                alert("ë¹„ë°€ë²ˆí˜¸ í™•ì¸ì„ ì…ë ¥í•˜ì„¸ìš”.");
                 pass_1.focus();
                 return false;
             }
             if (pass_1.value !== pass.value) {
-                alert("ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+                alert("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                 pass_1.focus();
                 return false;
             }
-            alert('°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.')
+            alert('ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.')
             location.href= "http://www.naver.com"
         }
     </script>
@@ -61,35 +63,35 @@
 
 <center>
     <div id="join">
-        <h3>È¸¿ø°¡ÀÔ</h3>
+        <h3>íšŒì›ê°€ì…</h3>
 
         <table cellpadding="5" cellspacing="0" from name="fm">
             <tr>
-                <td>´Ğ³×ÀÓ:</td>
-                <td><input id="name" type="text" placeholder="´Ğ³×ÀÓÀ» Àû¾îÁÖ¼¼¿ä.">
+                <td>ë‹‰ë„¤ì„:</td>
+                <td><input id="name" type="text" placeholder="ë‹‰ë„¤ì„ì„ ì ì–´ì£¼ì„¸ìš”.">
                 </td>
             </tr>
             <tr>
                 <td>ID:</td>
-                <td><input id="id" type="text" placeholder="¾ÆÀÌµğ">
+                <td><input id="id" type="text" placeholder="ì•„ì´ë””">
                 </td>
             </tr>
             <tr>
-                <td>ºñ¹Ğ¹øÈ£:</td>
-                <td><input id="pass" type="password" placeholder="ºñ¹Ğ¹øÈ£"></td>
+                <td>ë¹„ë°€ë²ˆí˜¸:</td>
+                <td><input id="pass" type="password" placeholder="ë¹„ë°€ë²ˆí˜¸"></td>
             </tr>
             <tr>
-                <td>ºñ¹Ğ¹øÈ£ È®ÀÎ:</td>
-                <td><input id="pass_1" type="password" placeholder="ºñ¹Ğ¹øÈ£ È®ÀÎ"></td>
+                <td>ë¹„ë°€ë²ˆí˜¸ í™•ì¸:</td>
+                <td><input id="pass_1" type="password" placeholder="ë¹„ë°€ë²ˆí˜¸ í™•ì¸"></td>
 
             </tr>
             <tr align="center">
                 <td colspan="2">
                     <a onclick="check()">
-                        <button>°¡ÀÔÇÏ±â</button>
+                        <button>ê°€ì…í•˜ê¸°</button>
                     </a>
                     <a onclick="hey()" href="http://www.naver.com">
-                        <button>°¡ÀÔÃë¼Ò</button>
+                        <button>ê°€ì…ì·¨ì†Œ</button>
                     </a>
                 </td>
             </tr>
@@ -100,4 +102,3 @@
 </body>
 
 </html>
-
