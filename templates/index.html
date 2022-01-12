@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
+    <title>Wishes For You</title>
 </head>
-<body>
-    <h1>서버를 만들었다!</h1>
+
+<body class="Site">
+    <header id="header">
+        <div class="contents-wrapper">
+            <h1 class="logo"><a href="#" class="link_logo"></a></h1>
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="main" class="Site-content content">
+        <div class="inner">
+            <div class="title-wrap">
+                <div class="title">Happy New Year!<br><em>2022</em></div>
+                <div class="sub-title">친구들에게 새해 덕담 카드를 받아보세요.</div>
+                <!-- <div class="sub-title">" <span class="user_name">김스파</span>님의 2022년을 음악과 함께 응원해 주세요 "</div> -->
+                <img src="../images/tiger.png" alt="tiger">
+
+            </div>
+            <a href="board.html" class="btn btn-create">내 방명록 만들기</a>
+        </div>
+
+    </main>
+    <footer id="footer">
+        <div class="inner">
+            <p class="copy_right">Copyright ©2022 TEAM ALLIN. All rights reserved.</p>
+        </div>
+    </footer>
+    <button class="btnTop">
+        <span class="material-icons">north</span>
+    </button>
 </body>
+
 </html>
