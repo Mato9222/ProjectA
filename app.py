@@ -6,20 +6,20 @@ def home():
    return render_template('index.html')
 
 @app.route('/input')
-def home():
+def input():
    return render_template('input.html')
 
-@app.route('/modify')
+@app.route('/board')
 def home():
    return render_template('modify.html')
-
-@app.route('/join')
-def home():
-   return render_template('join.html')
-
-@app.route('/login')
-def home():
-   return render_template('login.html')
+#
+# @app.route('/join')
+# def home():
+#    return render_template('join.html')
+#
+# @app.route('/login')
+# def home():
+#    return render_template('login.html')
 
 if __name__ == '__main__':
    app.run('0.0.0.0',port=5000,debug=True)
