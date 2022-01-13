@@ -63,9 +63,10 @@ img {
 //01.메인 페이지
 #header {
     position: fixed;
+    z-index: 99;
     width: 100%;
     height: 60px;
-    background: #252838;
+    background: #161b3a;
 
     .contents-wrapper {
         display: flex;
@@ -192,13 +193,29 @@ img {
 //02. 서브페이지
 
 //board.html
+.btn-share {
+    margin-bottom: 20px;
+    max-width: 200px;
+    border-radius: 50px;
+    background-color: #E76456;
+
+    .material-icons {
+        padding-left: 6px;
+        font-size: 16px;
+    }
+}
+
 .board-wrap {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
     width: 100%;
     height: auto;
     min-height: 400px;
     background-color: #252838;
+    box-sizing: border-box;
+    padding: 50px 0;
+
+
 
     .no-list {
         width: 900px;
@@ -209,19 +226,115 @@ img {
             display: block;
             padding-bottom: 30px;
         }
+    }
 
-        .btn-share {
-            max-width: 200px;
-            border-radius: 50px;
-            background-color: #E76456;
+    .wish-list-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
 
-            .material-icons {
-                padding-left: 6px;
-                font-size: 16px;
+
+        .wish-item {
+            >a>img {
+                display: block;
+                margin: 10px auto 0;
             }
+
+            position:relative;
+            margin: 0 20px 40px;
+            box-sizing:border-box;
+            text-align:center;
+            width:300px;
+            padding: 40px 20px;
+            min-height: 300px;
+            color: #666;
+            display: block;
+            background-color: rgb(255, 246, 221);
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #252838;
+                border-radius: 100%;
+                width: 10px;
+                height: 10px;
+                top: 10px;
+            }
+
+            .wish-info {
+                color: #666;
+                padding: 20px 0;
+
+                .song-title {
+                    font-weight: 500;
+                    color: #444;
+                    padding-bottom: 4px;
+                }
+
+                .song-artist {}
+
+                .wish-content {
+                    line-height: 20px;
+                    padding: 20px 0;
+                }
+
+                .wish-name {
+                    color: #444;
+                }
+
+            }
+
+            .btn-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-util {
+                    width: 60px;
+                    display: block;
+                    padding: 0 15px;
+                    height: 30px;
+                    line-height: 28px;
+                    border-radius: 100px;
+                    color: #fff;               
+                    font-size: 12px;
+                    letter-spacing: -1px;
+                    box-sizing: border-box;
+
+                    &.btn-update {
+                        background-color: #2f344e;
+                        margin-right:6px;                       
+                    }
+                    &.btn-delete { 
+                        border: 1px solid #2f344e;
+                        color:#2f344e;
+                    }
+
+                }
+
+
+            }
+
+
+
+
         }
 
     }
+
+    .btn-wrap {
+        .btn-more{
+            max-width:200px;
+            border-radius: 100px;
+            display:block;
+            background: #3a4baa;
+            color: #fff;
+        }
+    }
+
 }
 
 //input.html
@@ -252,7 +365,6 @@ img {
     box-sizing: border-box;
 
     .step1-box {
-
         .song-tag {
             display: flex;
             flex-direction: row;
@@ -261,7 +373,6 @@ img {
             width: 100%;
             margin: 0 auto;
             padding-top: 10px;
-
 
             li {
                 flex: 1;
@@ -292,22 +403,17 @@ img {
             justify-content: center;
             margin: 30px auto 0;
 
-
             li {
-                
                 margin: 0 10px 20px;
-                padding: 24px 10px;
+                padding: 36px 10px;
                 display: block;
                 background-color: #fff;
                 border: 1px solid #ccc;
-
-
 
                 &:hover {
                     border: 1px solid #444;
                     transition: all 0.4s;
                 }
-
 
                 .song-info {
                     padding: 20px;
@@ -317,7 +423,6 @@ img {
                         color: #222;
                         font-weight: 500;
                     }
-
                 }
 
                 .btn-pick-song {
@@ -340,10 +445,7 @@ img {
                         color: #fff;
                     }
                 }
-
-
             }
-
         }
 
         .txt {
@@ -372,13 +474,10 @@ img {
                 margin: 0;
                 padding: 30px;
 
-
-
                 .song-box {
-                                
-                    min-width:300px;
-                    height: 300px;                    
-                    margin-right: 50px;
+                    min-width: 300px;
+                    height: 300px;
+                    margin-right: 90px;
                     border-radius: 100%;
                     background-color: #333;
                     color: #fff;
@@ -387,13 +486,13 @@ img {
                         box-sizing: border-box;
                         padding: 50px 30px;
                     }
+
                     &.no-song {
                         display: block;
                         border: 1px dashed #ccc;
                         color: #444;
                         background-color: #fff;
                         line-height: 300px;
-
                     }
 
                     .song-info {
@@ -411,27 +510,26 @@ img {
                     .wish-form {
                         font-size: 18px;
                         text-align: left;
-                        .pb10{padding-bottom:10px;}
+
+                        .pb10 {
+                            padding-bottom: 10px;
+                        }
+
                         tr {
                             th {
-                                
                                 vertical-align: middle;
                                 color: #222;
                                 font-weight: 500;
                             }
 
-                            td {
-                               
-                            }
+                            td {}
 
                             &:nth-last-child() {
                                 padding-bottom: 0;
                             }
                         }
 
-
                         .form-wrap {
-
                             input {
                                 height: 40px;
                                 line-height: 40px;
@@ -447,16 +545,12 @@ img {
                             }
 
                             textarea {
-
                                 height: 160px;
                                 box-sizing: border-box;
-
                             }
                         }
                     }
                 }
-
-
             }
 
             .btn-wrap {
