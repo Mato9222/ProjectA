@@ -10,15 +10,15 @@ def input():
    return render_template('input.html')
 
 @app.route('/board')
-def home():
-   return render_template('modify.html')
+def board():
+   return render_template('board.html')
 #
 # @app.route('/join')
-# def home():
+# def join():
 #    return render_template('join.html')
 #
 # @app.route('/login')
-# def home():
+# def login():
 #    return render_template('login.html')
 
 if __name__ == '__main__':
