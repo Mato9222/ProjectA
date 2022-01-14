@@ -12,10 +12,10 @@ def input():
 @app.route('/board')
 def board():
    return render_template('board.html')
-#
-# @app.route('/join')
-# def join():
-#    return render_template('join.html')
+
+@app.route('/join')
+def join():
+   return render_template('join.html')
 #
 # @app.route('/login')
 # def login():

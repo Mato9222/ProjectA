@@ -20,9 +20,10 @@
 <body class="Site">
     <header id="header">
         <div class="contents-wrapper">
-            <h1 class="logo"><a href="#" class="link_logo"></a></h1>
+            <h1 class="logo">
+                <a href="/#" class="link_logo"></a></h1>
             <ul>
-                <li><a href="#">회원가입</a></li>
+                <li><a href="/join">회원가입</a></li>
                 <li><a href="#">로그인</a></li>
             </ul>
         </div>
@@ -33,10 +34,11 @@
                 <div class="title">Happy New Year!<br><em>2022</em></div>
                 <div class="sub-title">친구들에게 새해 덕담 카드를 받아보세요.</div>
                 <!-- <div class="sub-title">" <span class="user_name">김스파</span>님의 2022년을 음악과 함께 응원해 주세요 "</div> -->
-                <img src="../images/tiger.png" alt="tiger">
+                <img src="../static/images/tiger.png" alt="tiger">
 
             </div>
-            <a href="board.html" class="btn btn-create">내 방명록 만들기</a>
+            <button class="btn btn-create"><a href="/board">방명록 보기</a></button>
+            <button class="btn btn-create"><a href="/input">방명록 쓰기</a></button>
         </div>
 
     </main>
@@ -48,6 +50,8 @@
     <button class="btnTop">
         <span class="material-icons">north</span>
     </button>
+{% block content %}
+    {% endblock %}
 </body>
 
 </html>
