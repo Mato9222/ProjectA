@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/layout.css" />
+    <script src="../static/js/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/gsap/gsap.min.js"></script>
+    <title>Wishes For You : 내 방명록</title>
+
+    <script type="text/javascript">
+
+        function clip() {
+
+            var url = '';
+            var textarea = document.createElement("textarea");
+            document.body.appendChild(textarea);
+            url = window.document.location.href;
+            textarea.value = url;
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("링크 공유가 완료 되었습니다.                                                    " +
+                "덕담을 함께하고 싶은 친구와 공유해주세요.")
+        }
+
+    </script>
+</head>
+
+<body class="Site">
+    <header id="header">
+        <div class="contents-wrapper">
+            <h1 class="logo">
+                <a href="/#" class="link_logo"></a>
+            </h1>
+            <ul>
+                <!-- <li><a href="#">회원가입</a></li> -->
+                <li><a href="/join"><span class="user_name">김스파</span> 님</a></li>
+                <li><a href="#">로그아웃</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <section class="content Site-content">
+        <div class="inner">
+            <div class="title-wrap">
+                <div class="title">Happy New Year!<br><em>2022</em></div>
+                <div class="sub-title">" <span class="user_name">김스파</span>님의 2022년을 음악과 함께 응원해 주세요 "</div>
+                <a href="#" class="btn btn-share" onclick="clip(); return false;">링크 공유<span class="material-icons">
+                        share</span> </a>
+            </div>
+
+            <div class="board-wrap">
+                <!--
+            <div class="no-list">
+                <span class="no-msg">아직 친구들에게 받은 덕담 카드가 없어요! 친구들에게 내 방명록 링크를 공유해주세요</span>
+
+            </div>
+            -->
+
+                <ul id="wish-list" class="wish-list-wrap">
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                    <li class="wish-item">
+                        <a href="#">
+                            <img width="120" height="120"
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/38/762/10838762_20220111152931_500.jpg/melon/resize/120/quality/80/optimize"
+                                alt="다시 겨울이야 - 페이지 이동">
+                        </a>
+                        <div class="wish-info">
+                            <div class="ellipsis song-title">너와 헤어지는 일은 소용없는 일</div>
+                            <div class="ellipsis song-artist">유원지</div>
+                            <div class="wish-content">2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴 2022년엔 밥 잘 챙겨먹고 건강하렴
+                            </div>
+                            <div class="wish-name">from. 김르타</div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-util btn-update" onclick="updateItem()">수정</a>
+                            <a href="#" class="btn-util btn-delete" onclick="deleteItem()">삭제</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-wrap">
+                    <a href="#" class="btn btn-more">더 보기</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer id="footer">
+        <div class="inner">
+            <p class="copy_right">Copyright ©2022 TEAM ALLIN. All rights reserved.</p>
+        </div>
+    </footer>
+    <button class="btnTop">
+        <span class="material-icons">north</span>
+    </button>
+</body>
+
+</html>
