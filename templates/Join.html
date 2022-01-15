@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Wishes For You : 내 방명록</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Pacifico&display=swap"
+            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
-    <title>회원가입</title>
+    <link rel="stylesheet" href="../static/css/reset.css"/>
+    <link rel="stylesheet" href="../static/css/layout.css"/>
+
+    <script src="../static/js/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/gsap/gsap.min.js"></script>
+    <title>Wishes For You : 회원가입</title>
+    <style>
+        * {
+            font-size: 26px;
+        }
+
+        .join {
+            margin: auto;
+        }
+
+        .form {
+            border-bottom: 1.5px solid navy;
+        }
+
+        button {
+            margin-top: 30px;
+            padding-left: 35px;
+        }
+
+    </style>
 
     <script type="text/JavaScript">
 
         function hey() {
             alert('가입이 취소되었습니다.');
         }
+
         function check() {
             var name = document.getElementById("name");
             var id = document.getElementById("id");
@@ -54,51 +81,78 @@
                 return false;
             }
             alert('가입이 완료되었습니다.')
-            location.href= "http://www.naver.com"
+            location.href = "http://www.naver.com"
         }
     </script>
 </head>
 
-<body>
+<body class="Site">
+<header id="header">
+    <div class="contents-wrapper">
+        <h1 class="logo"><a href="/#" class="link_logo"></a></h1>
+        <ul>
+            <!-- <li><a href="#">회원가입</a></li> -->
+            <li><a href="#"><span class="user_name">강수경</span> 님</a></li>
+            <li><a href="#">로그아웃</a></li>
 
-<center>
-    <div id="join">
-        <h3>회원가입</h3>
-
-        <table cellpadding="5" cellspacing="0" from name="fm">
-            <tr>
-                <td>닉네임:</td>
-                <td><input id="name" type="text" placeholder="닉네임을 적어주세요.">
-                </td>
-            </tr>
-            <tr>
-                <td>ID:</td>
-                <td><input id="id" type="text" placeholder="아이디">
-                </td>
-            </tr>
-            <tr>
-                <td>비밀번호:</td>
-                <td><input id="pass" type="password" placeholder="비밀번호"></td>
-            </tr>
-            <tr>
-                <td>비밀번호 확인:</td>
-                <td><input id="pass_1" type="password" placeholder="비밀번호 확인"></td>
-
-            </tr>
-            <tr align="center">
-                <td colspan="2">
-                    <a onclick="check()">
-                        <button>가입하기</button>
-                    </a>
-                    <a onclick="hey()" href="http://www.naver.com">
-                        <button>가입취소</button>
-                    </a>
-                </td>
-            </tr>
-        </table>
+        </ul>
     </div>
-</center>
+</header>
+<section class="content Site-content">
+    <div class="inner">
+        <div class="title-wrap">
+            <div class="title">Happy New Year!<br><em>2022</em></div>
+            <div class="sub-title">" <span class="user_name"></span>회원가입을 위해 아래 내용을 입력해주세요. "</div>
+        </div>
+        <div class="board-wrap">
+            <div class="no-list">
+                <center>
 
+                    <div class="join">
+
+                        <table cellpadding="5" cellspacing="0">
+                            <tr class="form">
+                                <td><span class="material-icons" style="margin-right: 20px;">face</span></td>
+                                <td><input id="name" type="text" placeholder="닉네임을 적어주세요."></td>
+                            </tr>
+                            <tr class="form">
+                                <td><span class="material-icons">assignment_ind</span></td>
+                                <td><input id="id" type="text" placeholder="아이디">
+                                </td>
+                            </tr>
+                            <tr class="form">
+                                <td><span class="material-icons">turned_in</span></td>
+                                <td><input id="pass" type="password" placeholder="비밀번호"></td>
+                            </tr>
+                            <tr class="form">
+                                <td><span class="material-icons">bookmark_added</span></td>
+                                <td><input id="pass_1" type="password" placeholder="비밀번호 확인"></td>
+
+                            </tr>
+                            <tr align="center">
+                                <td colspan="2">
+                                    <a onclick="check()">
+                                        <button style="color: #FEB900">가입하기</button>
+                                    </a>
+                                    <a onclick="hey()" href="http://www.naver.com">
+                                        <button style="color: #FEB900">가입취소</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+            </div>
+
+</section>
+<footer id="footer">
+    <div class="inner">
+        <p class="copy_right">Copyright ©2022 TEAM ALLIN. All rights reserved.</p>
+    </div>
+</footer>
+<button class="btnTop">
+    <span class="material-icons">north</span>
+</button>
 </body>
 
 </html>
