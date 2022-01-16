@@ -29,6 +29,8 @@ def input():
             "utc_stamp": current_utc
         }
         data.insert_one(post)
+        return render_template('board.html')
+
     else:
         return render_template('input.html')
 
