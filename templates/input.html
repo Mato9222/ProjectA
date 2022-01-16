@@ -19,6 +19,9 @@
         function hello() {
             alert("안녕하세요");
         }
+
+            })
+        }
     </script>
 </head>
 
@@ -125,8 +128,7 @@
                             </div> -->
                             <!-- 덕담 작성 폼 -->
                             <div class="wish-con">
-                                <form method="post" action="">
-
+                                <form name="user_input" method="POST" action="/input">
                                     <table class="wish-form">
                                         <colgroup>
                                             <col style="width:100px;">
@@ -135,22 +137,30 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th class="pb10"><label for="">이름</label></th>
+                                                <th class="pb10">
+                                                    <label value="이름">이름</label>
+                                                </th>
                                                 <td class="pb10">
-                                                    <div class="form-wrap"><input class="type1" type="text"></div>
+                                                    <div class="form-wrap">
+                                                        <input class="type1" type="text" name="name">
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr >
-                                                <th class="pb10"><label for="">비밀번호</label></th>
+                                                <th class="pb10">
+                                                    <label value="비밀번호" for="">비밀번호</label>
+                                                </th>
                                                 <td class="pb10">
-                                                    <div class="form-wrap"><input class="type1" type="password"></div>
+                                                    <div class="form-wrap"><input class="type1" type="password" name="pw"></div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th><label for="">내용</label></th>
+                                                <th>
+                                                    <label value="내용">내용</label>
+                                                </th>
                                                 <td>
-                                                    <div class="form-wrap"><textarea class="type1" name="content"
-                                                            required=""></textarea>
+                                                    <div class="form-wrap">
+                                                        <textarea class="type1" tpye="text" name="content" required=""></textarea>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -172,14 +182,14 @@
                                         </li>
                                     </ul>
                                     -->
-
+                                <div class="btn-wrap">
+                                    <input type="submit" value="저장하기" class="btn btn-submit" onclick="makecontent()">
+                                    <input type="reset" value="다시입력" class="btn btn-reset">
+                                </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn btn-submit" onclick="hello()">저장하기</a>
-                            <a href="#" class="btn btn-reset">다시 입력</a>
-                        </div>
+
                     </div>
                 </div>
 
