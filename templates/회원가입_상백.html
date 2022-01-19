@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+
+<style>
+    * {
+        font-family: 'Jua', sans-serif;
+    }
+
+    {
+        box-sizing: border-box
+    }
+
+
+    .container {
+        padding: 16px;
+    }
+
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+
+    .registerbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        font-size: 20px;
+    }
+
+    .registerbtn:hover {
+        opacity: 1;
+
+    }
+
+
+    a {
+        color: dodgerblue;
+    }
+
+
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    .wrap {
+        width: 500px;
+        display: block;
+        margin: auto
+    }
+</style>
+
+
+<div class="wrap" action="action_page.php">
+    <div class="container">
+        <h1>회원가입</h1>
+        <p>빈칸을 채워주세요</p>
+        <hr>
+
+        <label for="email"><b>아이디</b></label>
+        <input type="text" placeholder="아이디를 입력하세요" name="email" id="email" required>
+
+        <label for="psw"><b>비밀번호</b></label>
+        <input type="password" placeholder="비밀번호를 입력하세요" name="psw" id="psw" required>
+
+        <label for="psw-repeat"><b>비밀번호 재확인</b></label>
+        <input type="password" placeholder="비밀번호를 반복하여 입력하세요" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">가입하기</button>
+    </div>
+
+    <div class="container signin">
+        <p>이미 계정이 있으신가요? <a href="로그인.html">로그인하기</a>.</p>
+    </div>
+</div>
