@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
 from datetime import datetime
 
@@ -6,9 +6,11 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/dbsparta"
 mongo = PyMongo(app)
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 @app.route('/input', methods=["GET","POST"])
 def input():
@@ -18,7 +20,6 @@ def input():
         user_content = request.form.get("content")
         current_utc = round(datetime.utcnow().timestamp() * 1000)
         print(user_name, current_utc)
-        print(user_name)
 
         data = mongo.db.userinput
         post = {
@@ -29,13 +30,15 @@ def input():
         }
         data.insert_one(post)
         return render_template('board.html')
+
     else:
         return render_template('input.html')
 
-@app.route('/board', methods=['GET'])
+
+@app.route('/board')
 def board():
-    userinput = list(mongo.db.userinput.find({}, {'_id': False}))
-    return jsonify({'all_input': userinput})
+    return render_template('board.html')
+
 
 @app.route('/join')
 def join():
