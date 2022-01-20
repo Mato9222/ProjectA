@@ -32,7 +32,11 @@ def input():
     else:
         return render_template('input.html')
 
-@app.route('/board', methods=['GET'])
+@app.route('/board')
+def board_page():
+    return render_template('board.html')
+
+@app.route('/board_data', methods=['GET'])
 def board():
     userinput = list(mongo.db.userinput.find({}, {'_id': False}))
     return jsonify({'all_input': userinput})
